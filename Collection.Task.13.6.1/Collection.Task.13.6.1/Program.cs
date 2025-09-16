@@ -4,10 +4,10 @@
  * На примере этого текста, выясните, какие будут различия между этими коллекциями.
  */
 
-//Путь до рабочего стола текущего пользователя
 using System.Diagnostics;
 using System.Security.Claims;
 
+//Путь до рабочего стола текущего пользователя
 string desktopPath = Path.Combine(
     Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Desktop");
 const string fileName = "input.txt";
@@ -37,10 +37,10 @@ Console.WriteLine($"Тестирование производительност�
 Console.WriteLine($"Количество строк: {lines.Length}\n");
 
 //Многократное тестирование для получения более точных результатов
-double listEndTotalTicks = 0;
-double listStartTotalTicks = 0;
-double linkedListEndTotalTicks = 0;
-double linkedListStartTotalTicks = 0;
+double listEndTotalMs = 0;
+double listStartTotalMs = 0;
+double linkedListEndTotalMs = 0;
+double linkedListStartTotalMs = 0;
 
 for (int i = 0; i < testIterations; i++)
 {
